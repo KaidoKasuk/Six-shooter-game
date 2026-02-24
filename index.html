@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dead Chamber — Russian Roulette</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+       HEADER
+  ============================================================ -->
+    <header>
+      <div class="header-title">Dead Chamber</div>
+      <nav class="header-nav">
+        <button class="nav-btn">New Game</button>
+        <button class="nav-btn">How to Play</button>
+        <button class="nav-btn">Settings</button>
+        <button class="nav-btn">Exit</button>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+       MAIN LAYOUT
+  ============================================================ -->
+    <div>
+      <!-- MAIN SECTION (3 columns) -->
+      <div class="main-section">
+        <!-- LEFT – PLAYER PANEL -->
+        <div class="panel player-panel">
+          <div>
+            <div>
+              <!-- SVG silhouette -->
+              <svg
+                class="avatar-silhouette"
+                viewBox="0 0 60 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="30" cy="18" r="13" fill="#d4c9b8" />
+                <path
+                  d="M5 68 C5 48 10 42 30 40 C50 42 55 48 55 68"
+                  fill="#d4c9b8"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="player-name">V. Markov</div>
+
+          <div class="health-section">
+            <div>
+              <span>Vitality</span>
+              <span>4 / 5</span>
+            </div>
+            <div class="health-track">
+              <div class="health-fill player-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER – TABLE PANEL -->
+        <div class="table-panel">
+          <div>Round 1 &nbsp;·&nbsp; Turn 3</div>
+
+          <!-- Revolver cylinder (top view) -->
+          <div class="cylinder-wrap">
+            <div class="cylinder-outer">
+              <div class="chamber empty"></div>
+              <div class="chamber loaded active"></div>
+              <div class="chamber empty"></div>
+              <div class="chamber empty"></div>
+              <div class="chamber loaded"></div>
+              <div class="chamber empty"></div>
+              <div class="cylinder-center"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT – ENEMY PANEL -->
+        <div class="player-panel enemy">
+          <div class="avatar-wrap">
+            <div>
+              <svg
+                class="avatar-silhouette"
+                viewBox="0 0 60 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="30" cy="18" r="13" fill="#c0392b" opacity="0.7" />
+                <path
+                  d="M5 68 C5 48 10 42 30 40 C50 42 55 48 55 68"
+                  fill="#c0392b"
+                  opacity="0.7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div style="color: #d45040">The Dealer</div>
+
+          <div class="health-section">
+            <div>
+              <span>Vitality</span>
+              <span>3 / 5</span>
+            </div>
+            <div class="health-track">
+              <div class="health-fill enemy-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /main-section -->
+
+      <!-- BOTTOM SECTION -->
+      <div class="bottom-section">
+        <!-- BOTTOM LEFT – PLAYER CONTROLS -->
+        <div>
+          <div>&nbsp;Action Console — Your Turn</div>
+
+          <div class="">
+            <button>Shoot Self</button>
+            <button>Shoot Enemy</button>
+            <button>Spin Chamber</button>
+            <button>Use Item</button>
+          </div>
+
+          <div>
+            <div class="item-label">Items</div>
+          </div>
+
+          <div>
+            <span>Player Vitality</span>
+            <span>4 / 5</span>
+          </div>
+        </div>
+
+        <!-- BOTTOM RIGHT – TABLE DETAIL VIEW -->
+        <div class="table-detail-panel">
+          <div class="detail-title">⬡ &nbsp;Table — Current State</div>
+
+          <div class="detail-content">
+            <!-- Larger cylinder -->
+
+            <!-- Table items -->
+            <!-- <div class="table-items">
+              <div class="table-item">
+                <div>🔭</div>
+                <div>Scope</div>
+              </div>
+              <div class="table-item">
+                <div>⛓</div>
+                <div>Shackle</div>
+              </div>
+              <div class="table-item">
+                <div>🩹</div>
+                <div>Bandage</div>
+              </div>
+              <div class="table-item">
+                <div>🪞</div>
+                <div>Mirror</div>
+              </div>
+            </div> -->
+          </div>
+          <!-- /detail-content -->
+        </div>
+      </div>
+      <!-- /bottom-section -->
+    </div>
+    <!-- /layout -->
+
+    <!-- STATUS BAR -->
+    <div class="status-bar">
+      <div><span></span>Session Active</div>
+      <div>Seed: 4A7F · Mode: Classic · Fate: Undecided</div>
+      <div>Dead Chamber v0.1</div>
+    </div>
+  </body>
+</html>
