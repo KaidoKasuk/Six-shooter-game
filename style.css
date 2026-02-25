@@ -303,6 +303,7 @@ header {
   background-color: rgb(41, 41, 41);
   padding: 30px;
   width: 400px;
+  min-height: 12em;
 }
 .terminal::after {
   content: "_";
