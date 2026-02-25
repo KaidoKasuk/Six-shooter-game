@@ -46,11 +46,7 @@ header {
 }
 
 .nav-btn:hover {
-  color: var(--red);
-  border-color: var(--red-dim);
-  box-shadow:
-    var(--glow-red),
-    inset 0 0 12px rgba(192, 57, 43, 0.08);
+  box-shadow: inset 0 0 12px rgba(192, 57, 43, 0.08);
 }
 
 .main-section {
@@ -59,42 +55,27 @@ header {
   background-position-y: 70%;
   background-repeat: no-repeat;
   display: block;
-  margin-top: 3vw;
-  min-height: 50vh;
+  min-height: 40vh;
   display: grid;
   grid-template-columns: 1fr 1.4fr 1fr;
-  gap: 1rem;
 }
 
 /* ============================================================
        PLAYER PANELS (left & right)
     ============================================================ */
 .player-panel {
-  padding-top: 1em;
+  padding: 0 0 2em 0em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: end;
 }
 
-/* .player-panel.enemy {
-} */
-
-/* Avatar */
-
-.avatar-circle {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* SVG silhouette */
-.avatar-silhouette {
-  width: 58px;
-  height: 68px;
-  opacity: 0.55;
+.profile-pic {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  transform: translate(-0%, -30%);
 }
 
 .player-name {
@@ -236,9 +217,6 @@ header {
     0 0 14px rgba(192, 57, 43, 0.7);
 }
 
-/* ============================================================
-       BOTTOM SECTION
-    /* ============================================================ */
 .bottom-section {
   min-height: 40vh;
   display: grid;
@@ -246,24 +224,18 @@ header {
   gap: 1rem;
   margin-top: 1rem;
 }
-*/
 
-/* ============================================================
-       BOTTOM LEFT – PLAYER CONTROLS
-    ============================================================ */
-
-.health-track.big {
-  height: 14px;
+.bottom-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
-/* ============================================================
-       BOTTOM RIGHT – TABLE DETAIL
-    ============================================================ */
 .table-detail-panel {
   background-image: url(./assets/fireflyTable.jpg);
   background-repeat: no-repeat;
-  background-position: center center; /* horizontal + vertical center */
-  background-size: 140%; /* 100% + 40% zoom */
+  background-position: center center;
+  background-size: 140%;
   border: 1px solid #1e1508;
   padding: 1.2rem;
   display: flex;
@@ -298,23 +270,52 @@ header {
   border-color: var(--gold-dim);
   box-shadow: 0 0 10px rgba(184, 148, 63, 0.12);
 }
-
-/* ============================================================
-       GLOWING SEPARATORS
-    ============================================================ */
-.vsep {
-  width: 1px;
-  background: linear-gradient(180deg, transparent, var(--red-dim), transparent);
-  box-shadow: 0 0 6px rgba(192, 57, 43, 0.3);
-  align-self: stretch;
+.item-label {
+  font-size: 3em;
+  padding-top: 1em;
 }
 
-/* ============================================================
-       STATUS BAR (very bottom)
-    ============================================================ */
-.status-bar {
+.gun-pic {
+  padding-top: 9em;
+  padding-left: 4em;
+  width: 20%;
+  transform: rotate(-45deg);
+}
+.gun-pic:hover {
+  filter: brightness(0) invert(1);
+}
+.bottom-button {
+  color: red;
+  background-color: rgb(119, 79, 79);
+  font-size: 1.4em;
+}
+.bottom-button:hover {
+  background-color: rgb(150, 113, 113);
+}
+.turn {
+  border: 2px solid rgb(255, 112, 112);
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: red;
+  background-color: rgb(119, 79, 79);
+  margin: 20px;
+}
+.terminal {
+  background-color: rgb(41, 41, 41);
+  padding: 30px;
+  width: 400px;
+}
+.terminal::after {
+  content: "_";
+  animation: cursorBlink 1s step-start infinite;
+}
+
+@keyframes cursorBlink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }

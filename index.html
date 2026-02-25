@@ -11,7 +11,7 @@
        HEADER
   ============================================================ -->
     <header>
-      <div class="header-title">Dead Chamber</div>
+      <div class="header-title">Six Shooter</div>
       <nav class="header-nav">
         <button class="nav-btn">New Game</button>
         <button class="nav-btn">How to Play</button>
@@ -28,24 +28,13 @@
       <div class="main-section">
         <!-- LEFT – PLAYER PANEL -->
         <div class="panel player-panel">
-          <div>
-            <div>
-              <!-- SVG silhouette -->
-              <svg
-                class="avatar-silhouette"
-                viewBox="0 0 60 70"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="30" cy="18" r="13" fill="#d4c9b8" />
-                <path
-                  d="M5 68 C5 48 10 42 30 40 C50 42 55 48 55 68"
-                  fill="#d4c9b8"
-                />
-              </svg>
-            </div>
+          <div class="profile-pic">
+            <img
+              class="profile-pic"
+              src="/assets/profile-svgrepo-com.svg"
+              alt=""
+            />
           </div>
-
           <div class="player-name">V. Markov</div>
 
           <div class="health-section">
@@ -61,7 +50,7 @@
 
         <!-- CENTER – TABLE PANEL -->
         <div class="table-panel">
-          <div>Round 1 &nbsp;·&nbsp; Turn 3</div>
+          <div>Round 1 · Turn 3</div>
 
           <!-- Revolver cylinder (top view) -->
           <div class="cylinder-wrap">
@@ -79,22 +68,12 @@
 
         <!-- RIGHT – ENEMY PANEL -->
         <div class="player-panel enemy">
-          <div class="avatar-wrap">
-            <div>
-              <svg
-                class="avatar-silhouette"
-                viewBox="0 0 60 70"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="30" cy="18" r="13" fill="#c0392b" opacity="0.7" />
-                <path
-                  d="M5 68 C5 48 10 42 30 40 C50 42 55 48 55 68"
-                  fill="#c0392b"
-                  opacity="0.7"
-                />
-              </svg>
-            </div>
+          <div class="profile-pic">
+            <img
+              class="profile-pic"
+              src="/assets/profile-svgrepo-com.svg"
+              alt=""
+            />
           </div>
 
           <div style="color: #d45040">The Dealer</div>
@@ -110,70 +89,45 @@
           </div>
         </div>
       </div>
-      <!-- /main-section -->
+    </div>
+    <!-- /main-section -->
 
-      <!-- BOTTOM SECTION -->
-      <div class="bottom-section">
-        <!-- BOTTOM LEFT – PLAYER CONTROLS -->
-        <div>
-          <div>&nbsp;Action Console — Your Turn</div>
-
-          <div class="">
-            <button>Shoot Self</button>
-            <button>Shoot Enemy</button>
-            <button>Spin Chamber</button>
-            <button>Use Item</button>
-          </div>
-
+    <!-- BOTTOM SECTION -->
+    <div class="bottom-section">
+      <!-- BOTTOM LEFT – PLAYER CONTROLS -->
+      <div class="bottom-left">
+        <div style="display: flex">
           <div>
-            <div class="item-label">Items</div>
+            Action Console
+            <p class="turn">— Your Turn</p>
           </div>
-
           <div>
-            <span>Player Vitality</span>
-            <span>4 / 5</span>
+            Action Console
+            <p class="terminal">game@username:~$</p>
           </div>
         </div>
+        <div class="bottom-navbar">
+          <button class="bottom-button">Shoot Self</button>
+          <button class="bottom-button">Shoot Enemy</button>
+          <button class="bottom-button">Spin Chamber</button>
+          <button class="bottom-button">Reload</button>
+        </div>
 
-        <!-- BOTTOM RIGHT – TABLE DETAIL VIEW -->
-        <div class="table-detail-panel">
-          <div class="detail-title">⬡ &nbsp;Table — Current State</div>
-
-          <div class="detail-content">
-            <!-- Larger cylinder -->
-
-            <!-- Table items -->
-            <!-- <div class="table-items">
-              <div class="table-item">
-                <div>🔭</div>
-                <div>Scope</div>
-              </div>
-              <div class="table-item">
-                <div>⛓</div>
-                <div>Shackle</div>
-              </div>
-              <div class="table-item">
-                <div>🩹</div>
-                <div>Bandage</div>
-              </div>
-              <div class="table-item">
-                <div>🪞</div>
-                <div>Mirror</div>
-              </div>
-            </div> -->
-          </div>
-          <!-- /detail-content -->
+        <div>
+          <div class="item-label">tühi koht kuhu ma ei tea mida lisada</div>
         </div>
       </div>
-      <!-- /bottom-section -->
-    </div>
-    <!-- /layout -->
 
-    <!-- STATUS BAR -->
-    <div class="status-bar">
-      <div><span></span>Session Active</div>
-      <div>Seed: 4A7F · Mode: Classic · Fate: Undecided</div>
-      <div>Dead Chamber v0.1</div>
+      <!-- BOTTOM RIGHT – TABLE DETAIL VIEW -->
+      <div class="table-detail-panel">
+        <div class="detail-title">Table</div>
+        <div>
+          <img class="gun-pic" src="assets/gun-svgrepo-com.svg" alt="" />
+          <img class="gun-pic" src="assets/gun-svgrepo-com.svg" alt="" />
+          <img class="gun-pic" src="assets/gun-svgrepo-com.svg" alt="" />
+        </div>
+        <div class="detail-content"></div>
+      </div>
     </div>
   </body>
 </html>
